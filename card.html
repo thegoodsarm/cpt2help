@@ -15,30 +15,37 @@
       background: #f9f9f9;
       width: 3.37in;
       height: 2.13in;
-      padding: 0.25in;
+      padding: 0.15in;
       box-sizing: border-box;
       margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      font-size: 0.65em;
     }
 
     label {
-      font-size: 0.75em;
-      margin-top: 0.3em;
+      margin-top: 0.2em;
+      font-weight: bold;
     }
 
     input {
       width: 100%;
-      font-size: 0.75em;
-      padding: 0.2em;
+      font-size: 0.65em;
+      padding: 0.15em;
       margin-top: 0.1em;
       box-sizing: border-box;
     }
 
     .instructions {
+      margin-bottom: 0.3em;
+    }
+
+    .disclaimer {
+      margin-top: 1em;
+      text-align: center;
       font-size: 0.7em;
-      color: #333;
+      color: #555;
     }
 
     .print {
@@ -81,11 +88,12 @@
     </div>
   </div>
 
+  <div class="disclaimer">
+    This is an example card. Please consult your physician to confirm accuracy.
+  </div>
+
   <div class="print">
     <button onclick="window.print()">Print This Card</button>
-    <p style="font-size: 0.75em; color: #555;">
-      This is an example card. Please consult your physician to confirm accuracy.
-    </p>
   </div>
 </body>
 </html>
