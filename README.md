@@ -1,1 +1,1 @@
-# cpt2help
+# CPT2 Help is a free site that explains CPT2 deficiency in simple terms, including triggers like fasting or exercise, emergency care steps, and dietary tips. It offers printable wallet cards and resources for patients and families.
