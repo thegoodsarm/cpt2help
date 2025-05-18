@@ -4,38 +4,87 @@
   <meta charset="UTF-8">
   <title>Emergency Wallet Card</title>
   <style>
-    body { font-family: sans-serif; padding: 2em; }
-    .card { border: 1px solid #444; padding: 1.5em; background: #f2f2f2; max-width: 500px; margin: auto; }
-    label { display: block; margin-top: 1em; font-weight: bold; }
-    input { width: 100%; padding: 0.5em; margin-top: 0.25em; }
-    .print { margin-top: 1.5em; }
+    body {
+      font-family: sans-serif;
+      background: #fff;
+      padding: 2em;
+    }
+
+    .card {
+      border: 1px solid #444;
+      background: #f9f9f9;
+      width: 3.37in;
+      height: 2.13in;
+      padding: 0.25in;
+      box-sizing: border-box;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    label {
+      font-size: 0.75em;
+      margin-top: 0.3em;
+    }
+
+    input {
+      width: 100%;
+      font-size: 0.75em;
+      padding: 0.2em;
+      margin-top: 0.1em;
+      box-sizing: border-box;
+    }
+
+    .instructions {
+      font-size: 0.7em;
+      color: #333;
+    }
+
+    .print {
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+        background: none;
+      }
+
+      .print {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h2>Emergency Medical Card – CPT2 Deficiency</h2>
-    <p><strong>I HAVE CPT2 DEFICIENCY</strong><br/>
-    I am at risk for severe rhabdomyolysis. If I am weak, in pain, or disoriented:<br/>
-    <strong>Start Dextrose 10% (D10) IV immediately. Do not wait for labs.</strong></p>
+    <div class="instructions">
+      <strong>I HAVE CPT2 DEFICIENCY</strong><br/>
+      I am at risk for severe rhabdomyolysis. If I am weak, in pain, or disoriented:<br/>
+      <strong>Start Dextrose 10% (D10) IV immediately. Do not wait for labs.</strong>
+    </div>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
 
-    <label for="dob">Date of Birth:</label>
-    <input type="text" id="dob">
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob">
 
-    <label for="contact">Emergency Contact:</label>
-    <input type="text" id="contact">
+      <label for="contact">Emergency Contact:</label>
+      <input type="text" id="contact">
 
-    <label for="doctor">Treating Physician:</label>
-    <input type="text" id="doctor">
+      <label for="doctor">Treating Physician:</label>
+      <input type="text" id="doctor">
+    </div>
+  </div>
 
-    <p class="print">
-      <button onclick="window.print()">Print This Card</button>
-    </p>
-
-    <p style="font-size: 0.85em; color: #555;">
-      This form is for educational use. Please consult a licensed physician before relying on this information in a medical emergency.
+  <div class="print">
+    <button onclick="window.print()">Print This Card</button>
+    <p style="font-size: 0.75em; color: #555;">
+      This is an example card. Please consult your physician to confirm accuracy.
     </p>
   </div>
 </body>
